@@ -4,24 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
     <title>JS</title>
 </head>
 <body>
+    <center>
+        <div class="theme">
+            <label for="theme">Theme: </label>
+            <select id="theme">
+                <option value="white">White</option>
+                <option value="black">Black</option>
+            </select>
+        </div>
+        <span>A Website</span>
+        
+        <div class="calendar">
+            <div class="row">
+                <label for="calendar" id="month">Month: </label>
+                <select id="calendar">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+            </div>
+            <table>
+                <caption><h2></h2></caption>
+                <tr>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>               
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>           
+                    <td>13</td>           
+                    <td>14</td> 
+                </tr>
+                <tr>       
+                    <td>15</td>           
+                    <td>16</td>           
+                    <td>17</td>           
+                    <td>18</td>           
+                    <td>19</td>           
+                    <td>20</td>           
+                    <td>21</td>  
+                </tr>
+                <tr>         
+                    <td>22</td>           
+                    <td>23</td>           
+                    <td>24</td>           
+                    <td>25</td>           
+                    <td>26</td>           
+                    <td>27</td>           
+                    <td>28</td> 
+                </tr>
+                <tr>          
+                    <td>29</td>           
+                    <td>30</td>           
+                    <td>31</td>
+                </tr>
+            </table>
+        </div>
+        
+    </center>
     <script>
-        let a = 10;
-        console.log(a);
-        console.log(9 * a);
-        let b = 7 * a;
-        console.log(b);
-        const MAX = 57;
-        let actual = MAX - 13;
-        let percentage = actual /  MAX;
-        console.log(percentage);
-        console.log("Hello, World!");
-        console.log(23 + 97);
-        console.log(3 + 3 + 7 + 22 + 50 + 10);
-        console.log((4 + 6 + 9) / 77);
+        // let a = 10;
+        // console.log(a);
+        // console.log(9 * a);
+        // let b = 7 * a;
+        // console.log(b);
+        // const MAX = 57;
+        // let actual = MAX - 13;
+        // let percentage = actual /  MAX;
+        // console.log(percentage);
+        // console.log("Hello, World!");
+        // console.log(23 + 97);
+        // console.log(3 + 3 + 7 + 22 + 50 + 10);
+        // console.log((4 + 6 + 9) / 77);
+        
+        // Theme   ----------------------------
+        const select = document.querySelector('#theme');
+        const html = document.querySelector('html');
+        document.body.style.padding = '10px';
+        
+        function update(bgColor, textColor) {
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+        }
+        
+        select.addEventListener('change', () => select.value === 'black' ? update('black', 'white') : update('white', 'black')
+        );
+        
+        
+        // calendar ----------------------------
+        
     </script>
 </body>
-<script src="javascript.js"></script>
+<script src="login.js"></script>
+<script src="calendar.js"></script>
 </html>
